@@ -1,0 +1,13 @@
+{
+  "files": [],
+  "compilerOptions": {
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    //vite/client vite客户端类型（.svg与.env文件导入类型提示）
+    "types": ["vite/client"]
+  },
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
