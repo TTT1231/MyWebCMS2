@@ -1,0 +1,28 @@
+{
+    "login":{
+        "DefaultLogin":"Login",
+        "PhoneLogin":"Phone Login",
+        "QrCodeLogin":"QrCode Login",
+        "OtherLoginMethods":"other login methods",
+        "RegisterTitle":"Register",
+        "account":"Account",
+        "password":"Password",
+        "phone":"phone",
+        "placeholderAccount":"Please enter your account",
+        "placeholderPassword":"Please enter your password",
+        "placeholderPhone":"Please enter your phone",
+        "placeholderPhoneCode":"input enter your phone code",
+        "rememberPassword":"remember password",
+        "forgetPassword":"forget password?",
+        "phoneCode":"p code",
+        "retrieveCode":"retrieve to get code",
+        "startTip":"Let's start working !!!",
+        "startTipInput":"Enter your information to start using",
+        "back": "Back",
+        "qrCodeTip":" Scan the code and click \"Confirm\" to complete the login process"
+    },
+    "namespace1":{
+        "gret":"hello",
+        "hello":"event"
+    }
+}

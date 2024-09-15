@@ -9,6 +9,7 @@ import { AntDesignVueResolver } from "unplugin-vue-components/resolvers";
 import path from 'node:path'
 //mock服务
 import {viteMockServe} from 'vite-plugin-mock'
+
 export default defineConfig({
   plugins: [
     vue(),
@@ -17,7 +18,8 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()],
     }),
     Components({
-      resolvers: [ElementPlusResolver(), AntDesignVueResolver()],
+      resolvers: [ElementPlusResolver({importStyle:true}),    
+        AntDesignVueResolver({importStyle:false})],//antd4内部采用css in js无需引入样式
     }),
     viteMockServe({
       mockPath:'./mock',
