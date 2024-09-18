@@ -21,8 +21,27 @@
             "back": "返回",
             "qrCodeTip":"扫码后点击\"确认\"，即可完成登录"
     },
-    "namespace1":{
-        "gret":"你好",
-        "hello":"事件"
+    "formvalid":{
+        "account":"用户名不能为空",
+        "password":"密码不能为空",
+        "passwordLength":"密码长度不能小于3位",
+        "phone":"请输入手机号",
+        "phoneCode":"请输入验证码",
+        "phoneCodeError":"验证码错误",
+        "phoneCodeExpired":"验证码已过期",
+        "phoneCodeInvalid":"验证码无效",
+        "phoneCodeUsed":"验证码已使用"
+    },
+    "message":{
+            "loginSuccess":"登录成功",
+            "loginFail":"登录失败",
+            "registerSuccess":"注册成功",
+            "registerFail":"注册失败",
+            "phoneCodeSuccess":"验证码发送成功",
+            "phoneCodeFail":"验证码发送失败",
+            "phoneCodeError":"验证码错误",
+            "phoneCodeExpire":"验证码已过期",
+            "phoneCodeEmpty":"验证码不能为空",
+            "phoneEmpty":"手机号不能为空"
     }
 }

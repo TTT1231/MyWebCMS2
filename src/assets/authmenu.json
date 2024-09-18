@@ -1,0 +1,331 @@
+{
+   "status": 200,
+   "message": "成功",
+   "data": [
+      {
+         "_id": 1,
+         "user_id": 1,
+         "menuname": "Dashbord",
+         "menutype": "tree",
+         "parent_id": -1,
+         "iconpath": "menu",
+         "path": "",
+         "isHide": "false",
+         "childrens": [
+            {
+               "_id": 2,
+               "userid": 1,
+               "menuname": "分析页",
+               "menutype": "node",
+               "parent_id": 1,
+               "iconpath": "",
+               "path": "/main/analysis",
+               "isHide": "false",
+               "childrens": []
+            },
+            {
+               "_id": 3,
+               "userid": 1,
+               "menuname": "工作台",
+               "menutype": "node",
+               "parent_id": 1,
+               "path": "/main/workbench",
+               "iconpath": "",
+               "isHide": "false",
+               "childrens": []
+            }
+         ]
+      },
+      {
+         "_id": 4,
+         "user_id": 1,
+         "menuname": "权限管理",
+         "menutype": "tree",
+         "parent_id": -1,
+         "path": "q4",
+         "iconpath": "yaoshi",
+         "isHide": "false",
+         "childrens": [
+            {
+               "_id": 5,
+               "userid": 1,
+               "menuname": "基于前端权限",
+               "menutype": "tree",
+               "parent_id": 4,
+               "path": "q5",
+               "iconpath": "",
+               "isHide": "false",
+               "childrens": [
+                  {
+                     "_id": 6,
+                     "user_id": 1,
+                     "menuname": "页面权限",
+                     "menutype": "node",
+                     "parent_id": 5,
+                     "iconpath": "",
+                     "path": "",
+                     "isHide": "false",
+                     "childrens": []
+                  },
+                  {
+                     "_id": 7,
+                     "user_id": 1,
+                     "menuname": "按钮权限",
+                     "menutype": "node",
+                     "parent_id": 5,
+                     "iconpath": "",
+                     "path": "",
+                     "isHide": "false",
+                     "childrens": []
+                  },
+                  {
+                     "_id": 8,
+                     "user_id": 1,
+                     "menuname": "权限测试页",
+                     "menutype": "node",
+                     "parent_id": 5,
+                     "iconpath": "",
+                     "path": "",
+                     "isHide": "false",
+                     "childrens": []
+                  }
+               ]
+            },
+            {
+               "_id": 9,
+               "user_id": 1,
+               "menuname": " 基于后端权限",
+               "menutype": "tree",
+               "parent_id": 4,
+               "iconpath": "",
+               "path": "",
+               "isHide": "false",
+               "childrens": [
+                  {
+                     "_id": 10,
+                     "user_id": 1,
+                     "menuname": "页面权限",
+                     "menutype": "node",
+                     "parent_id": 9,
+                     "iconpath": "",
+                     "path": "",
+                     "isHide": "false",
+                     "childrens": []
+                  },
+                  {
+                     "_id": 11,
+                     "user_id": 1,
+                     "menuname": "按钮权限",
+                     "menutype": "node",
+                     "parent_id": 9,
+                     "iconpath": "",
+                     "path": "",
+                     "isHide": "false",
+                     "childrens": []
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "_id": 12,
+         "user_id": 1,
+         "menuname": "功能",
+         "menutype": "tree",
+         "parent_id": -1,
+         "iconpath": "gongneng",
+         "path": "",
+         "isHide": "false",
+         "childrens": [
+            {
+               "_id": 13,
+               "user_id": 1,
+               "menuname": "截图",
+               "menutype": "node",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "/main/fun/shotscreen",
+               "isHide": "false",
+               "childrens": []
+            },
+            {
+               "_id": 14,
+               "user_id": 1,
+               "menuname": "websocket测试",
+               "menutype": "node",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "/main/fun/websocket",
+               "isHide": "false",
+               "childrens": []
+            },
+            {
+               "_id": 15,
+               "user_id": 1,
+               "menuname": "测试请求重试",
+               "menutype": "node",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "/main/fun/requestretry",
+               "isHide": "false",
+               "childrens": []
+            },
+            {
+               "_id": 16,
+               "user_id": 1,
+               "menuname": "登录过期",
+               "menutype": "node",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "/main/fun/loginout",
+               "isHide": "false",
+               "childrens": []
+            },
+            {
+               "_id": 17,
+               "user_id": 1,
+               "menuname": "打印",
+               "menutype": "node",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "/main/fun/print",
+               "isHide": "false",
+               "childrens": []
+            },
+            {
+               "_id": 18,
+               "user_id": 1,
+               "menuname": "右键菜单",
+               "menutype": "node",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "/main/fun/rightmenu",
+               "isHide": "false",
+               "childrens": []
+            },
+            {
+               "_id": 19,
+               "user_id": 1,
+               "menuname": "文件下载",
+               "menutype": "node",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "/main/fun/download",
+               "isHide": "false",
+               "childrens": []
+            },
+            {
+               "_id": 20,
+               "user_id": 1,
+               "menuname": "图片预览",
+               "menutype": "node",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "/main/fun/imgpreview",
+               "isHide": "false",
+               "childrens": []
+            },
+            {
+               "_id": 21,
+               "user_id": 1,
+               "menuname": "剪切板",
+               "menutype": "node",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "/main/fun/cuttext",
+               "isHide": "false",
+               "childrens": []
+            },
+            {
+               "_id": 22,
+               "user_id": 1,
+               "menuname": "水波纹",
+               "menutype": "node",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "/main/fun/ripple",
+               "isHide": "false",
+               "childrens": []
+            },
+            {
+               "_id": 23,
+               "user_id": 1,
+               "menuname": "全屏",
+               "menutype": "node",
+               "isHide": "false",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "/main/fun/fullscreen",
+               "childrens": []
+            },
+            {
+               "_id": 24,
+               "user_id": 1,
+               "menuname": "Excel",
+               "menutype": "tree",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "",
+               "isHide": "false",
+               "childrens": [
+                  {
+                     "_id": 25,
+                     "user_id": 1,
+                     "menuname": "选择导出格式",
+                     "menutype": "node",
+                     "parent_id": 24,
+                     "iconpath": "",
+                     "path": "/main/fun/excel/export1",
+                     "isHide": "false",
+                     "childrens": []
+                  },
+                  {
+                     "_id": 26,
+                     "user_id": 1,
+                     "menuname": "JSON数据导出",
+                     "menutype": "node",
+                     "parent_id": 24,
+                     "iconpath": "",
+                     "path": "/main/fun/excel/export2",
+                     "isHide": "false",
+                     "childrens": []
+                  },
+                  {
+                     "_id": 27,
+                     "user_id": 1,
+                     "menuname": "Array数据导出",
+                     "menutype": "node",
+                     "parent_id": 24,
+                     "iconpath": "",
+                     "path": "/main/fun/excel/export3",
+                     "isHide": "false",
+                     "childrens": []
+                  },
+                  {
+                     "_id": 28,
+                     "user_id": 1,
+                     "menuname": "导入",
+                     "menutype": "node",
+                     "parent_id": 24,
+                     "iconpath": "",
+                     "path": "/main/fun/excel/import",
+                     "isHide": "false",
+                     "childrens": []
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "_id": 29,
+         "user_id": 1,
+         "menuname": "单元测试",
+         "menutype": "node",
+         "parent_id": -1,
+         "iconpath": "",
+         "path": "/main/test",
+         "isHide": "false",
+         "childrens": []
+      }
+   ]
+}

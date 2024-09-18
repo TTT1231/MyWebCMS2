@@ -1,7 +1,13 @@
 import axios from 'axios';
 import type { AxiosInstance, AxiosRequestConfig } from 'axios';
 import { AxiosHeaders } from 'axios';
-
+export interface RequestRaw<T> {
+   config: any;
+   data: T;
+   headers: AxiosHeaders;
+   request: XMLHttpRequest;
+   status: number;
+}
 export interface RequestRaw<T> {
    config: any;
    data: T;

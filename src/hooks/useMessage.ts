@@ -16,13 +16,13 @@ export interface MessageConfig{
 export const createMessage=(config:Omit<MessageConfig,'duration'>,duration:number=1)=>{
     switch (config.type){
         case MessageType.success:
-            message.success({ content:config.message,duration:duration*1000 });
+            message.success({ content:config.message,duration:duration });
             break;
         case MessageType.error:
-            message.error({ content:config.message,duration:duration*1000 });
+            message.error({ content:config.message,duration:duration });
             break;
         case MessageType.warning:
-            message.warning({ content:config.message,duration:duration*1000 });
+            message.warning({ content:config.message,duration:duration });
             break;
     }
     return;

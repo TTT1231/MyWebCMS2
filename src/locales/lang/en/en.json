@@ -21,8 +21,27 @@
         "back": "Back",
         "qrCodeTip":" Scan the code and click \"Confirm\" to complete the login process"
     },
-    "namespace1":{
-        "gret":"hello",
-        "hello":"event"
+    "formvalid":{
+        "account":"account can not be empty",
+        "password":"password can not be empty",
+        "passwordLength":"password length can not less than 3",
+        "phone":"please input phone number",
+        "phoneCode":"please input phone code",
+        "phoneCodeError":"phone code error",
+        "phoneCodeExpired":"phone code expired",
+        "phoneCodeInvalid":"phone code invalid",
+        "phoneCodeUsed":"phone code used"
+    },
+    "message":{
+        "loginSuccess":"Login Success",
+        "loginFail":"Login Fail",
+        "registerSuccess":"Register Success",
+        "registerFail":"Register Fail",
+        "phoneCodeSuccess":"Phone Code Success",
+        "phoneCodeFail":"Phone Code Fail",
+        "phoneCodeError":"Phone Code Error",
+        "phoneCodeExpired":"Phone Code Expired",
+        "phoneCodeInvalid":"Phone Code Invalid",
+        "phoneCodeUsed":"Phone Code Used"
     }
 }

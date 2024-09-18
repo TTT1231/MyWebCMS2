@@ -1,8 +1,14 @@
 <script setup lang="ts">
-import { computed,reactive,ref,useTemplateRef } from 'vue';
+import { computed,reactive,ref,useTemplateRef ,watch} from 'vue';
 import { useLogin,LoginState } from './useLogin';
 import { FormInstance,type FormRules } from 'element-plus';
 import {  useGlobalConfigStore } from '@/store/modules/globalConfigModule';
+import {loginApi} from '@/api/login/login'
+import { MessageType, useMessage } from '@/hooks/useMessage';
+import { HttpStatusCode } from '@/enums/httpenums';
+import {useT,useLang} from '@/hooks/lang/useLang'
+import {useUserStore} from '@/store/modules/userModule'
+import { UserInfo } from '@/types/user';
 
 interface RuleForm {
    account: string;
@@ -16,19 +22,24 @@ const isShow = computed(()=>{
    }
    else return false;
 })
+
+const {createMessage}=useMessage();
+const loading=ref(false);
+const t=useT();
+
 const ruleFormRef=useTemplateRef<FormInstance>('ruleFormRef');
 const ruleForm = reactive<RuleForm>({
    account: 'admin',
    password: '123456'
 });
 
-const rules = reactive<FormRules<RuleForm>>({
-   account: [{ required: true, message: '用户名不能为空', trigger: 'blur' }],
-   password: [
-      { required: true, message: '密码不能为空', trigger: 'blur' },
-      { min: 3, message: '密码需要在三位以上', trigger: 'blur' }
-   ]
-});
+const rules = computed<FormRules<RuleForm>>(() => ({
+  account: [{ required: true, message: t('formvalid.account'), trigger: 'blur' }],
+  password: [
+    { required: true, message: t('formvalid.password'), trigger: 'blur' },
+    { min: 3, message: t('formvalid.passwordLength'), trigger: 'blur' }
+  ]
+}));
 
 const changePhoneLogin=()=>{
    setCurrentState(LoginState.LoginMobile);
@@ -40,6 +51,9 @@ const changeRegister=()=>{
    setCurrentState(LoginState.LoginRegister);
 }
 const formValid=ref(false);
+
+const userStore=useUserStore();
+
 const handleLogin=async ()=>{
    if(!ruleFormRef) return;
    await ruleFormRef.value!.validate((valid)=>{
@@ -51,8 +65,33 @@ const handleLogin=async ()=>{
    })
    if(formValid.value){
       //表单验证成功之后
+      try{
+         loading.value=true;
+         const data=await loginApi<UserInfo>({
+            account:ruleForm.account,
+            password:ruleForm.password
+         });
+         console.log(data)
+         if(data.code===HttpStatusCode.OK){
+            userStore.setUserInfo(data.data);
+            createMessage({type:MessageType.success,message:t('message.loginSuccess')})
+         }else createMessage({type:MessageType.error,message:t('message.loginFail')})
+      }catch(e){
+      }finally{
+         ruleFormRef.value!.resetFields();
+         loading.value=false;
+      }
+
+     
+
    }
 }
+const {locale}=useLang();
+watch(()=>locale.value, () => {
+  if (ruleFormRef.value) {
+    ruleFormRef.value.clearValidate(); // 重置表单验证状态
+  }
+});
 </script>
 
 <template>
@@ -79,7 +118,7 @@ const handleLogin=async ()=>{
             <el-checkbox :label="$t('login.rememberPassword')" v-model="globalConfigStore.getRememberPassword as boolean" />
             <span class=" hover:text-blue-400 hover:cursor-pointer">{{ $t('login.forgetPassword') }}</span>
          </div>
-         <AButton type='primary' class=" animate-enterx-medspeed ease-out" @click="handleLogin">{{$t('login.DefaultLogin')}}</AButton>
+         <AButton type='primary' class=" animate-enterx-medspeed ease-out" @click="handleLogin" :loading="loading">{{$t('login.DefaultLogin')}}</AButton>
          <div class="flex gap-4 flex-col md:flex-row md:[&>*]:w-1/3 animate-enterx-autospeed ease-in-out">
             <AButton @click="changePhoneLogin" >{{$t('login.PhoneLogin')}}</AButton>
             <AButton @click="hanldeQrcodeLogin">{{$t('login.QrCodeLogin')}}</AButton>
