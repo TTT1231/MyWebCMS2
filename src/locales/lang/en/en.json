@@ -1,47 +1,67 @@
 {
-    "login":{
-        "DefaultLogin":"Login",
-        "PhoneLogin":"Phone Login",
-        "QrCodeLogin":"QrCode Login",
-        "OtherLoginMethods":"other login methods",
-        "RegisterTitle":"Register",
-        "account":"Account",
-        "password":"Password",
-        "phone":"phone",
-        "placeholderAccount":"Please enter your account",
-        "placeholderPassword":"Please enter your password",
-        "placeholderPhone":"Please enter your phone",
-        "placeholderPhoneCode":"input enter your phone code",
-        "rememberPassword":"remember password",
-        "forgetPassword":"forget password?",
-        "phoneCode":"p code",
-        "retrieveCode":"retrieve to get code",
-        "startTip":"Let's start working !!!",
-        "startTipInput":"Enter your information to start using",
-        "back": "Back",
-        "qrCodeTip":" Scan the code and click \"Confirm\" to complete the login process"
-    },
-    "formvalid":{
-        "account":"account can not be empty",
-        "password":"password can not be empty",
-        "passwordLength":"password length can not less than 3",
-        "phone":"please input phone number",
-        "phoneCode":"please input phone code",
-        "phoneCodeError":"phone code error",
-        "phoneCodeExpired":"phone code expired",
-        "phoneCodeInvalid":"phone code invalid",
-        "phoneCodeUsed":"phone code used"
-    },
-    "message":{
-        "loginSuccess":"Login Success",
-        "loginFail":"Login Fail",
-        "registerSuccess":"Register Success",
-        "registerFail":"Register Fail",
-        "phoneCodeSuccess":"Phone Code Success",
-        "phoneCodeFail":"Phone Code Fail",
-        "phoneCodeError":"Phone Code Error",
-        "phoneCodeExpired":"Phone Code Expired",
-        "phoneCodeInvalid":"Phone Code Invalid",
-        "phoneCodeUsed":"Phone Code Used"
-    }
+   "login": {
+      "DefaultLogin": "Login",
+      "PhoneLogin": "Phone Login",
+      "QrCodeLogin": "QrCode Login",
+      "OtherLoginMethods": "other login methods",
+      "RegisterTitle": "Register",
+      "account": "Account",
+      "password": "Password",
+      "phone": "phone",
+      "placeholderAccount": "Please enter your account",
+      "placeholderPassword": "Please enter your password",
+      "placeholderPhone": "Please enter your phone",
+      "placeholderPhoneCode": "input enter your phone code",
+      "rememberPassword": "remember password",
+      "forgetPassword": "forget password?",
+      "phoneCode": "p code",
+      "retrieveCode": "retrieve to get code",
+      "startTip": "Let's start working !!!",
+      "startTipInput": "Enter your information to start using",
+      "back": "Back",
+      "qrCodeTip": " Scan the code and click \"Confirm\" to complete the login process"
+   },
+   "common": {
+      "MySystemName": "My Web CMS"
+   },
+   "formvalid": {
+      "account": "account can not be empty",
+      "password": "password can not be empty",
+      "passwordLength": "password length can not less than 3",
+      "phone": "please input phone number",
+      "phoneCode": "please input phone code",
+      "phoneCodeError": "phone code error",
+      "phoneCodeExpired": "phone code expired",
+      "phoneCodeInvalid": "phone code invalid",
+      "phoneCodeUsed": "phone code used"
+   },
+   "message": {
+      "loginSuccess": "Login Success",
+      "loginFail": "Login Fail",
+      "registerSuccess": "Register Success",
+      "registerFail": "Register Fail",
+      "phoneCodeSuccess": "Phone Code Success",
+      "phoneCodeFail": "Phone Code Fail",
+      "phoneCodeError": "Phone Code Error",
+      "phoneCodeExpired": "Phone Code Expired",
+      "phoneCodeInvalid": "Phone Code Invalid",
+      "phoneCodeUsed": "Phone Code Used"
+   },
+   "menu": {
+      "home": "home",
+      "analysis": "analysis",
+      "workbench": "workbench",
+      "systemanager": "systemanager",
+      "usermanager": "usermanager",
+      "menumanager": "menumanager",
+      "fun": "fun",
+      "shotscreen": "shotscreen",
+      "commontable": "commontable",
+      "occupy": "occupy"
+   },
+   "header": {
+      "notify": "notify",
+      "fullscreen": "fullscreen",
+      "setting": "setting"
+   }
 }

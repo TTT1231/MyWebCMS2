@@ -6,7 +6,8 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
     "baseUrl": ".",
-    "types": ["element-plus/global","ant-design-vue/typings/global.d.ts"],
+    //vite/client vite客户端类型，使用vite解析模块，用于routes动态路由
+    "types": ["element-plus/global","ant-design-vue/typings/global.d.ts","vite/client"],
     "paths": {
       "@/*": ["./src/*"]
     },

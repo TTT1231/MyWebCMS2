@@ -1,0 +1,56 @@
+{
+   "data": [
+      {
+         "path": "/main",
+         "name": "main",
+         "component": "MainForm",
+         "meta": {
+            "ishide": false,
+            "ishome": true
+         },
+         "children": [
+            {
+               "path": "home",
+               "name": "home",
+               "component": "",
+               "meta": {
+                  "ishide": false,
+                  "ishome": false
+               },
+               "children": [
+                  {
+                     "path": "analysis",
+                     "name": "analysis",
+                     "component": "sys/home/Analysis",
+                     "meta": {
+                        "ishide": false,
+                        "ishome": false
+                     },
+                     "children": []
+                  },
+                  {
+                     "path": "workbench",
+                     "name": "workbench",
+                     "component": "sys/home/WorkBench",
+                     "meta": {
+                        "ishide": true,
+                        "ishome": false
+                     },
+                     "children": []
+                  }
+               ]
+            },
+            {
+               "path": "/:patchMatch(.*)",
+               "name": "error",
+               "component": "error/Error",
+               "meta": {
+                  "ishide": false,
+                  "ishome": false
+               },
+               "children": []
+            }
+         ]
+      }
+   ]
+}

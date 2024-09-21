@@ -1,4 +1,4 @@
-export function jsonSuccess(data:any,message='成功'):JsonReturn<any>{
+export function jsonSuccess(data:Object,message='成功'):JsonReturn<any>{
     return{
         code:200,
         message:message,

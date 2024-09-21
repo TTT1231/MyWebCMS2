@@ -1,2 +1,2 @@
-import { VAxios } from "./axios/VAxios";
-export const defhttps=new VAxios({});
+import { VAxios } from './axios/VAxios';
+export const defhttps = new VAxios({});

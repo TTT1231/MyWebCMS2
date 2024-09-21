@@ -18,7 +18,7 @@
                "menuname": "分析页",
                "menutype": "node",
                "parent_id": 1,
-               "iconpath": "",
+               "iconpath": "menu",
                "path": "/main/analysis",
                "isHide": "false",
                "childrens": []

@@ -1,0 +1,296 @@
+{
+   "data": [
+      {
+         "_menuid": 1,
+         "_submenuid": "sub1",
+         "menuname": "menu.home",
+         "menutype": "tree",
+         "parent_id": -1,
+         "icon": "home",
+         "path": "",
+         "role": ["admin"],
+         "ishide": false,
+         "childrens": [
+            {
+               "_menuid": 2,
+               "_submenuid": "",
+               "menuname": "menu.analysis",
+               "menutype": "node",
+               "parent_id": 1,
+               "icon": "analysis",
+               "path": "/main/home/analysis",
+               "role": ["admin"],
+               "ishide": false,
+               "childrens": []
+            },
+            {
+               "_menuid": 3,
+               "_submenuid": "",
+               "menuname": "menu.workbench",
+               "menutype": "node",
+               "parent_id": 1,
+               "icon": "workbench",
+               "path": "/main/home/workbench",
+               "role": ["admin"],
+               "ishide": true,
+               "childrens": []
+            }
+         ]
+      },
+      {
+         "_menuid": 4,
+         "_submenuid": "sub2",
+         "menuname": "menu.systemanager",
+         "menutype": "tree",
+         "parent_id": -1,
+         "icon": "systemanager",
+         "path": "",
+         "role": ["admin"],
+         "ishide": false,
+         "childrens": [
+            {
+               "_menuid": 5,
+               "_submenuid": "",
+               "menuname": "menu.usermanager",
+               "menutype": "node",
+               "parent_id": 4,
+               "icon": "usermanager",
+               "path": "/main/systemanager/usermanager",
+               "role": ["admin"],
+               "ishide": false,
+               "childrens": []
+            },
+            {
+               "_menuid": 6,
+               "_submenuid": "",
+               "menuname": "menu.menumanager",
+               "menutype": "node",
+               "parent_id": 4,
+               "icon": "menumanager",
+               "path": "/main/systemanager/menumanager",
+               "role": ["admin"],
+               "ishide": false,
+               "childrens": []
+            }
+         ]
+      },
+      {
+         "_menuid": 7,
+         "_submenuid": "sub3",
+         "menuname": "menu.fun",
+         "menutype": "tree",
+         "parent_id": -1,
+         "icon": "fun",
+         "path": "/main/fun",
+         "role": ["admin"],
+         "ishide": false,
+         "childrens": [
+            {
+               "_menuid": 8,
+               "_submenuid": "",
+               "menuname": "menu.shotscreen",
+               "menutype": "node",
+               "parent_id": 7,
+               "icon": "shotscreen",
+               "path": "/main/fun/shotscreen",
+               "role": ["admin"],
+               "ishide": false,
+               "childrens": []
+            },
+            {
+               "_menuid": 9,
+               "_submenuid": "",
+               "menuname": "menu.commontable",
+               "menutype": "node",
+               "parent_id": 7,
+               "icon": "commontable",
+               "path": "/main/fun/commontable",
+               "role": ["admin"],
+               "ishide": false,
+               "childrens": []
+            }
+         ]
+      },
+      {
+         "_menuid": 10,
+         "_submenuid": "sub4",
+         "menuname": "menu.occupy",
+         "menutype": "tree",
+         "parent_id": -1,
+         "icon": "occupy",
+         "path": "",
+         "role": ["admin"],
+         "ishide": false,
+         "childrens": [
+            {
+               "_menuid": 11,
+               "_submenuid": "",
+               "menuname": "menu.occupy",
+               "menutype": "node",
+               "parent_id": 10,
+               "icon": "occupy",
+               "path": "/main/occupy",
+               "role": ["admin"],
+               "ishide": false,
+               "childrens": []
+            },
+            {
+               "_menuid": 12,
+               "_submenuid": "",
+               "menuname": "menu.occupy",
+               "menutype": "node",
+               "parent_id": 10,
+               "icon": "occupy",
+               "path": "/main/occupy",
+               "role": ["admin"],
+               "ishide": false,
+               "childrens": []
+            },
+            {
+               "_menuid": 13,
+               "_submenuid": "",
+               "menuname": "menu.occupy",
+               "menutype": "node",
+               "parent_id": 10,
+               "icon": "occupy",
+               "path": "/main/occupy",
+               "role": ["admin"],
+               "ishide": false,
+               "childrens": []
+            },
+            {
+               "_menuid": 14,
+               "_submenuid": "",
+               "menuname": "menu.occupy",
+               "menutype": "node",
+               "parent_id": 10,
+               "icon": "occupy",
+               "path": "/main/occupy",
+               "role": ["admin"],
+               "ishide": false,
+               "childrens": []
+            },
+            {
+               "_menuid": 15,
+               "_submenuid": "",
+               "menuname": "menu.occupy",
+               "menutype": "node",
+               "parent_id": 10,
+               "icon": "occupy",
+               "path": "",
+               "role": ["admin"],
+               "ishide": false,
+               "childrens": []
+            },
+            {
+               "_menuid": 16,
+               "_submenuid": "",
+               "menuname": "menu.occupy",
+               "menutype": "node",
+               "parent_id": 10,
+               "icon": "occupy",
+               "path": "",
+               "role": ["admin"],
+               "ishide": false,
+               "childrens": []
+            },
+            {
+               "_menuid": 17,
+               "_submenuid": "",
+               "menuname": "menu.occupy",
+               "menutype": "node",
+               "parent_id": 10,
+               "icon": "occupy",
+               "path": "",
+               "role": ["admin"],
+               "ishide": false,
+               "childrens": []
+            },
+            {
+               "_menuid": 18,
+               "_submenuid": "",
+               "menuname": "menu.occupy",
+               "menutype": "node",
+               "parent_id": 10,
+               "icon": "occupy",
+               "path": "",
+               "role": ["admin"],
+               "ishide": false,
+               "childrens": []
+            },
+            {
+               "_menuid": 19,
+               "_submenuid": "",
+               "menuname": "menu.occupy",
+               "menutype": "node",
+               "parent_id": 10,
+               "icon": "occupy",
+               "path": "",
+               "role": ["admin"],
+               "ishide": false,
+               "childrens": []
+            },
+            {
+               "_menuid": 20,
+               "_submenuid": "",
+               "menuname": "menu.occupy",
+               "menutype": "node",
+               "parent_id": 10,
+               "icon": "occupy",
+               "path": "",
+               "role": ["admin"],
+               "ishide": false,
+               "childrens": []
+            },
+            {
+               "_menuid": 21,
+               "_submenuid": "",
+               "menuname": "menu.occupy",
+               "menutype": "node",
+               "parent_id": 10,
+               "icon": "occupy",
+               "path": "",
+               "role": ["admin"],
+               "ishide": false,
+               "childrens": []
+            },
+            {
+               "_menuid": 22,
+               "_submenuid": "",
+               "menuname": "menu.occupy",
+               "menutype": "node",
+               "parent_id": 10,
+               "icon": "occupy",
+               "path": "",
+               "role": ["admin"],
+               "ishide": false,
+               "childrens": []
+            },
+            {
+               "_menuid": 23,
+               "_submenuid": "",
+               "menuname": "menu.occupy",
+               "menutype": "node",
+               "parent_id": 10,
+               "icon": "occupy",
+               "path": "",
+               "role": ["admin"],
+               "ishide": false,
+               "childrens": []
+            },
+            {
+               "_menuid": 24,
+               "_submenuid": "",
+               "menuname": "menu.occupy",
+               "menutype": "node",
+               "parent_id": 10,
+               "icon": "occupy",
+               "path": "",
+               "role": ["admin"],
+               "ishide": false,
+               "childrens": []
+            }
+         ]
+      }
+   ]
+}
