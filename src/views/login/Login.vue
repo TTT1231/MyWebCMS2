@@ -11,6 +11,7 @@ const { toggleLang } = useLang();
 const lang = ref(false);
 const sweatsPlach = `${SVGHOME}/login/SweatsPlach.svg`;
 const atomElectron = `${SVGHOME}/login/AtomElectron.svg`;
+const atomElectronBlue= `${SVGHOME}/login/AtomElectronBlue.svg`
 </script>
 <template>
    <div class="h-screen w-full relative">
@@ -21,6 +22,9 @@ const atomElectron = `${SVGHOME}/login/AtomElectron.svg`;
             un-checked-children="中"
             @change="toggleLang"
          />
+      </div>
+      <div class=" hidden absolute h-28 sm:ml-11 minx:block md:mt-11 md:ml-11 xl:hidden"> 
+         <img :src="atomElectronBlue" alt="电子与原子图片" class="w-full h-full" />
       </div>
       <div class="md: bg-gray-700 xl:bg-white xl:py-0 h-full py-4">
          <div class="flex h-full md:w-full">

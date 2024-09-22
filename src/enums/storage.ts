@@ -1,5 +1,7 @@
 export enum StorageEnum {
    ROUTES = 'routes',
    MENUS = 'menus',
-   ALLMENUS = 'allmenus'
+   ALLMENUS = 'allmenus',
+   CURRENTTABS='currenttabs',
+   CURRENTINDEX='currenttabindex',
 }

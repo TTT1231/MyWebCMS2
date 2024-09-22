@@ -14,6 +14,7 @@ import { UserInfo } from '@/types/user';
 import { router } from '@/router';
 import { persistent } from '@/utils/permission/persistent';
 import { TOKEN__KEY } from '@/enums/user';
+import { useTabsStore } from '@/store/modules/tabsModule';
 interface RuleForm {
    account: string;
    password: string;
@@ -58,6 +59,7 @@ const formValid = ref(false);
 const userStore = useUserStore();
 const menusStore = useMenusStore();
 const routesStore = useRoutesStore();
+const tabsStore=useTabsStore();
 
 //其中UserInfo为null
 
@@ -83,16 +85,23 @@ const handleLogin = async () => {
             account: ruleForm.account,
             password: ruleForm.password
          });
-
-         const rawRoutes = (await getRoutesApi({ token: data.data.token })).data;
-         routesStore.setMenus(rawRoutes);
-
-         //获取菜单数据，并设置token
-         const menus = (await getNewMenusApi({ token: data.data.token })).data;
          persistent.setSession(TOKEN__KEY, data.data.token);
 
-         menusStore.setMenus(menus);
+         const menus = (await getNewMenusApi({ token: data.data.token })).data;
+         console.log(menus);
+
+         let rawRoutes = (await getRoutesApi({ token: data.data.token })).data;
+         routesStore.setRoutes(rawRoutes);
+
+         //获取菜单数据，并设置token
+    
+    
+         console.log(menus);
          menusStore.setAllMenus(menus);
+
+         menusStore.setMenus([...menus]);
+         tabsStore.setAllTabs(menus);
+
          if (data.code === HttpStatusCode.OK) {
             userStore.setUserInfo(data.data);
             router.push('/main');

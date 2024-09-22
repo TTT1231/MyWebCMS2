@@ -7,6 +7,7 @@ import { TOKEN__KEY } from '@/enums/user';
 import { useRoutesStore } from '@/store/modules/routesModule';
 import { router } from '@/router';
 import { useMenusStore } from '@/store/modules/menusModule';
+import { useTabsStore } from '@/store/modules/tabsModule';
 const isAddRoutes = ref(false);
 export function setupRouterGuards() {
    // if(!isAddRoutes.value){
@@ -24,8 +25,10 @@ export function setupRouterGuards() {
 export function setupRouter(app: App<Element>) {
    const routesStore = useRoutesStore();
    const menusStore = useMenusStore();
+   const tabsStore=useTabsStore();
    menusStore.restoreData();
    routesStore.restoreData();
+   tabsStore.restoreData();
    app.use(router);
 }
 //路由白名单
@@ -36,7 +39,7 @@ function createPermissionGuard(router: Router) {
    router.beforeEach((to, _, next) => {
       let token = persistent.getSessionOfKey(TOKEN__KEY);
       NProgress.start();
-
+      console.log('路由加载一次')
       //不是登录页、获取到了token,或者导航到了错误页面
       if (to.path !== '/' && token !== null) {
          next();

@@ -4,6 +4,7 @@ import { SVGHOME } from '@/enums/globalEnums';
 import { watch } from 'vue';
 import { ref } from 'vue';
 import HeaderRight from '@/components/sys/header/index.vue';
+import BreadNav from '@/components/breadnav/BreadNav.vue';
 const isCollapse = ref(false);
 const collapse = ref(`${SVGHOME}/sys/expand.svg`);
 const handleCollapse = () => {
@@ -36,9 +37,11 @@ watch(
                   </div>
                   <div><HeaderRight /></div>
                </div>
-               <div class="w-full h-12 border">面包屑</div>
+               <div class="w-full h-12 border">
+                  <BreadNav/>
+               </div>
 
-               <div class="bg-red-200 py-px">
+               <div class="bg-red-200 py-px mt-[2px]">
                   <RouterView />
                </div>
             </ElHeader>

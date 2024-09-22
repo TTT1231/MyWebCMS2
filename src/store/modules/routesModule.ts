@@ -3,8 +3,8 @@ import type { BackRoutesType, RoutesType } from '@/types/login';
 import { persistent } from '@/utils/permission/persistent';
 import { StorageEnum } from '@/enums/storage';
 import { router } from '@/router';
-//转换路由
-const routes: RouteType[] = [];
+
+
 const filterRoutes = (routes: BackRoutesType[]) => {
    const res: BackRoutesType[] = [];
    routes.forEach((item) => {
@@ -19,27 +19,16 @@ const filterRoutes = (routes: BackRoutesType[]) => {
    return res;
 };
 
-interface RouteType {
-   name: string;
-   path: string;
-   component: any;
-   children?: RouteType[];
-   meta: {
-      ishide: boolean;
-      ishome: boolean;
-   };
-}
-
 //使用vite解析,vite特有
 const components = import.meta.glob('../../views/**/*.vue');
 
 function recurseAddRoutes(routes: RoutesType[]) {
    return routes.map((route) => {
-      if (route.component === undefined || route.component === '') {
+      if ( route.component === ''||route.component === undefined ) {
       } else {
          route.component = components[`../../views/${route.component}.vue`];
-      }
-
+     
+        }
       // 递归处理子路由
       if (route.children.length > 0 && route.children) {
          route.children = recurseAddRoutes(route.children);
@@ -78,13 +67,14 @@ export const useRoutesStore = defineStore('routes', {
             return `/src/views/sys/${item.component}.vue`;
          }
       },
-      setMenus(menus: BackRoutesType[]) {
+      setRoutes(rawRoutes: BackRoutesType[]) {
          // console.log(menus)
-         this.rawroutes = menus;
+         this.rawroutes = rawRoutes;
          //进一步处理
-         let handleHide = filterRoutes(menus);
+         let handleHide = filterRoutes(rawRoutes);
+         
 
-         //    console.log(handleHide);
+            console.log(handleHide);
 
          //转换路由,同时动态添加路由
          addAllRoutes(recurseAddRoutes(handleHide));
@@ -96,11 +86,12 @@ export const useRoutesStore = defineStore('routes', {
          }
       },
       restoreData() {
-         console.log('restoreData');
+        
          let routesKey = persistent.getSessionOfKey(StorageEnum.ROUTES);
-         if (routesKey) {
+         if (routesKey!==null&&routesKey!=='') {
+            console.log('restoreRoutes');
             let rawroutes = JSON.parse(JSON.stringify(routesKey)) as BackRoutesType[];
-            this.setMenus(rawroutes);
+            this.setRoutes(rawroutes);
          }
       }
    },

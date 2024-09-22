@@ -2,6 +2,20 @@
 export default {
   content: ["./src/**/*.{html,js,ts,jsx,vue}"],
   theme: {
+    screens:{
+        "minx":"500px",
+        'sm': '640px',
+        // => @media (min-width: 640px) { ... }
+
+        'md': '768px',
+        // => @media (min-width: 768px) { ... }
+
+        'lg': '1024px',
+        // => @media (min-width: 1024px) { ... }
+
+        'xl': '1280px',
+        // => @media (min-width: 1280px) { ... }
+    },
     extend: {
       /**
        * linear：动画速度在整个过程中保持恒定。
